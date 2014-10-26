@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if ??? doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>emet</id>
+    <title>Enhanced Mitigation Experience Toolkit</title>
+    <version>5.0</version>
+    <authors>Microsoft</authors>
+    <owners>mstrange</owners>
+    <summary>The Enhanced Mitigation Experience Toolkit (EMET) is designed to help customers with their defense in depth strategies against cyberattacks, by helping detect and block exploitation techniques that are commonly used to exploit memory corruption vulnerabilities.</summary>
+    <description>The Enhanced Mitigation Experience Toolkit (EMET) is designed to help customers with their defense in depth strategies against cyberattacks, by helping detect and block exploitation techniques that are commonly used to exploit memory corruption vulnerabilities. EMET anticipates the most common actions and techniques adversaries might use in compromising a computer, and helps protect by diverting, terminating, blocking, and invalidating those actions and techniques. EMET helps protect your computer systems even before new and undiscovered threats are formally addressed by security updates and antimalware software. EMET benefits enterprises and all computer users by helping to protect against security threats and breaches that can disrupt businesses and daily lives.</description>
+    <projectUrl>http://technet.microsoft.com/en-us/security/jj653751</projectUrl>
+    <tags>emet security exploit aslr dep</tags>
+    <copyright>(C) 2014 Microsoft</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="DotNet4.5" version="4.5.20120822" />
+    </dependencies>
+    <releaseNotes/>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
