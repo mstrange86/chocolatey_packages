@@ -6,6 +6,10 @@ $packageName= 'emet'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://download.microsoft.com/download/8/E/E/8EEFD9FC-46B1-4A8B-9B5D-13B4365F8CA0/EMET%20Setup.msi'
 
+# tests fail with the log unable to write to the disk unless we explicitly make the directory
+$logroot = "$env:TEMP\chocolatey\$packageName\"
+mkdir $logroot
+
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
@@ -13,7 +17,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  silentArgs    = "/qn /norestart /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`""
+  silentArgs    = "/qn /norestart /l*v `"$logroot\$($packageName).MsiInstall.log`""
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'EMET*'
