@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>emet</id>
     <title>Enhanced Mitigation Experience Toolkit</title>
-    <version>5.5</version>
+    <version>5.5.2</version>
     <authors>Microsoft</authors>
     <owners>mstrange</owners>
     <summary>The Enhanced Mitigation Experience Toolkit (EMET) is designed to help customers with their defense in depth strategies against cyberattacks, by helping detect and block exploitation techniques that are commonly used to exploit memory corruption vulnerabilities.</summary>

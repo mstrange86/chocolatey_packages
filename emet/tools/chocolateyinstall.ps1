@@ -8,7 +8,7 @@ $url        = 'https://download.microsoft.com/download/8/E/E/8EEFD9FC-46B1-4A8B-
 
 # tests fail with the log unable to write to the disk unless we explicitly make the directory
 $logroot = "$env:TEMP\chocolatey\$packageName\"
-mkdir $logroot
+mkdir -Force $logroot           # force is to avoid already-exists error case
 
 $packageArgs = @{
   packageName   = $packageName
